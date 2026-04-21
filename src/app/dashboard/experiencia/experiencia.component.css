@@ -199,11 +199,13 @@
 
 	.exp-panel-header {
 		padding: 0 18px;
-		min-height: 150px;
+		min-height: unset;
+		height: auto;
 	}
 
 	.exp-panel.mat-expanded .exp-panel-header {
-		min-height: 150px;
+		min-height: unset;
+		height: auto;
 	}
 
 	.panel-head {
@@ -214,6 +216,11 @@
 	.header-top {
 		flex-direction: column;
 		align-items: flex-start;
+		gap: 6px;
+	}
+
+	.company-name {
+		font-size: 0.9rem;
 	}
 
 	.job-title {
