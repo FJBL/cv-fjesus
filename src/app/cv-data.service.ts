@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { shareReplay, map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { shareReplay, map, catchError } from 'rxjs/operators';
+import { Observable, EMPTY } from 'rxjs';
 import {
   CvData,
   PerfilData,
@@ -32,18 +32,18 @@ export class CvDataService {
     .pipe(shareReplay(1));
 
   getPerfil(): Observable<PerfilData> {
-    return this.data$.pipe(map(d => d.perfil));
+    return this.data$.pipe(map(d => d.perfil), catchError(() => EMPTY));
   }
 
   getExperiencia(): Observable<ExperienciaData> {
-    return this.data$.pipe(map(d => d.experiencia));
+    return this.data$.pipe(map(d => d.experiencia), catchError(() => EMPTY));
   }
 
   getHabilidades(): Observable<HabilidadesData> {
-    return this.data$.pipe(map(d => d.habilidades));
+    return this.data$.pipe(map(d => d.habilidades), catchError(() => EMPTY));
   }
 
   getContacto(): Observable<ContactoData> {
-    return this.data$.pipe(map(d => d.contacto));
+    return this.data$.pipe(map(d => d.contacto), catchError(() => EMPTY));
   }
 }

@@ -1,0 +1,6 @@
+projectKey=cv-fesus
+serverUrl=http://localhost:9000
+serverVersion=25.3.0.104237
+dashboardUrl=http://localhost:9000/dashboard?id=cv-fesus
+ceTaskId=f86be0a0-dade-400e-9e4c-53bcf658aefd
+ceTaskUrl=http://localhost:9000/api/ce/task?id=f86be0a0-dade-400e-9e4c-53bcf658aefd

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { AsyncPipe, CommonModule } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -8,9 +8,9 @@ import { CvDataService } from '../../cv-data.service';
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe, CommonModule, MatCardModule, MatIconModule, MatExpansionModule, MatDividerModule],
+  imports: [AsyncPipe, MatCardModule, MatIconModule, MatExpansionModule, MatDividerModule],
   templateUrl: './experiencia.component.html',
-  styleUrls: ['./experiencia.component.css']
+  styleUrl: './experiencia.component.css'
 })
 export class ExperienciaComponent {
   protected readonly experiencia$ = inject(CvDataService).getExperiencia();

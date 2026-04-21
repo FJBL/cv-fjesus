@@ -46,9 +46,22 @@
             <span class="availability-dot"></span>
             {{ p.availability }}
           </div>
+          <a class="download-cv"
+             href="/CV_FJesus.pdf"
+             download="CV_Flaviano_de_Jesus.pdf"
+             aria-label="Descargar CV en PDF">
+            <mat-icon aria-hidden="true">download</mat-icon>
+            Descargar CV
+          </a>
         </div>
       </div>
     </div>
   </article>
 </section>
+} @else {
+  <div class="loading-state" aria-busy="true" aria-label="Cargando perfil">
+    <div class="loading-bar"></div>
+    <div class="loading-bar loading-bar--short"></div>
+    <div class="loading-bar"></div>
+  </div>
 }

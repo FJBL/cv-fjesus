@@ -10,7 +10,7 @@ import { CvDataService } from '../../cv-data.service';
   standalone: true,
   imports: [AsyncPipe, MatCardModule, MatButtonModule, MatIconModule, RouterLink],
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css']
+  styleUrl: './perfil.component.css'
 })
 export class PerfilComponent {
   protected readonly perfil$ = inject(CvDataService).getPerfil();

@@ -1,3 +1,4 @@
+export interface MenuItem  { label: string; path: string; icon?: string; }
 export interface Metric    { value: string; label: string; }
 export interface Stat      { value: string; label: string; }
 export interface Block     { title: string; text: string; }
@@ -63,6 +64,7 @@ export interface ContactoData {
   intro: string;
   channelLabel: string;
   email: string;
+  celular?: string;
   emailCopy: string;
   blocks: Block[];
 }

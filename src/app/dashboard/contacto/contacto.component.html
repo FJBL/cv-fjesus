@@ -8,14 +8,27 @@
 
   <article class="contact-card">
     <div class="contact-hero">
+      <div class="contact-badge">
+        <mat-icon>mail</mat-icon>
+      </div>
       <div>
         <div class="contact-label">{{ c.channelLabel }}</div>
         <a class="contact-mail" [href]="'mailto:' + c.email">{{ c.email }}</a>
         <p class="contact-copy">{{ c.emailCopy }}</p>
       </div>
-      <div class="contact-badge">
-        <mat-icon>mail</mat-icon>
+      <div class="contact-channels">
+        @if (c.celular) {
+          <a class="contact-phone"
+             [href]="whatsappUrl(c.celular)"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Abrir WhatsApp">
+            <mat-icon aria-hidden="true">chat</mat-icon>
+            <span>WhatsApp {{ c.celular }}</span>
+          </a>
+        }
       </div>
+      
     </div>
 
     <div class="contact-grid">
@@ -28,4 +41,10 @@
     </div>
   </article>
 </section>
+} @else {
+  <div class="loading-state" aria-busy="true" aria-label="Cargando contacto">
+    <div class="loading-bar"></div>
+    <div class="loading-bar loading-bar--short"></div>
+    <div class="loading-bar"></div>
+  </div>
 }

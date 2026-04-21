@@ -4,16 +4,16 @@
     "name": "Flaviano de Jesús",
     "nameAccent": "Bautista López",
     "intro": "Desarrollador orientado a arquitectura backend, microservicios, seguridad y plataformas empresariales de alta disponibilidad.",
-    "tag": "Arquitecto de software · Java · Integración empresarial",
-    "lead": "Más de 7 años en diseño, evolución y mantenimiento de aplicaciones de alto rendimiento para organizaciones como Santander, SAT y Totalplay.",
-    "summary": "Trabajo con foco en escalabilidad, observabilidad, seguridad y calidad técnica, participando en soluciones que integran microservicios, mensajería, autenticación y administración de datos críticos.",
+    "tag": "Desarrollo backend | Microservicios | Seguridad | Arquitectura empresarial",
+    "lead": "Más de 7 años en análisis, diseño, desarrollo y mantenimiento de aplicaciones de alto rendimiento para organizaciones como Santander, SAT Mexico y Totalplay.",
+    "summary": "Trabajo con foco en escalabilidad, seguridad y calidad técnica, participando en soluciones que integran microservicios, mensajería, autenticación, administración de datos críticos y procesos batch, con experiencia en tecnologías como Java, Spring Boot, Oracle, Angular y plataformas de despliegue como OpenShift.",
     "metrics": [
       { "value": "7+", "label": "Años de experiencia" },
-      { "value": "4",  "label": "Sectores clave" },
-      { "value": "Full Stack", "label": "Backend y front corporativo" }
+     
+      { "value": "Full Stack", "label": "Back End y Front End corporativo" }
     ],
-    "email": "correo@ejemplo.com",
-    "strengths": ["Microservicios", "Seguridad", "Bases de datos", "Arquitectura escalable"],
+    "email": "bautistalopezfj@gmail.com",
+    "strengths": ["Microservicios", "Bases de datos", "Trabajo en equipo", "Documentación técnica", "Pruebas y mantenimiento", "Seguridad"],
     "availability": "Disponible para proyectos y nuevas oportunidades"
   },
 
@@ -25,7 +25,7 @@
       {
         "icon": "work",
         "company": "Santander",
-        "period": "08/2021 – Presente",
+        "period": "08/2021 - Presente",
         "jobTitle": "Desarrollador de Software Full Stack",
         "summary": "Migración de tecnología Agave en un entorno CAAS con arquitectura de microservicios.",
         "expanded": true,
@@ -34,15 +34,15 @@
           "Análisis, desarrollo y mantenimiento de microservicios.",
           "Configuración de API Gateway y componentes para pistas de auditoría.",
           "Autenticación por Entra ID (Azure) y manejo de sesión con Redis.",
-          "Pruebas unitarias, SAST y DAST; documentación técnica completa.",
+          "Pruebas unitarias, SAST y DAST. Documentación técnica completa.",
           "Trabajo bajo marco Scrum."
         ],
         "highlight": {
           "label": "Proyecto adicional",
-          "text": "Migración y Calidad de Datos a Nómina SAP, con soporte a procesos de nómina, pensiones y RRHH."
+          "text": "Migración y calidad de Datos a Nómina SAP, con soporte a procesos de nómina, pensiones y RRHH."
         },
         "techLabel": "Tecnologías",
-        "techs": ["Framework Darwin", "Entra ID", "Redis", "Kafka", "Java 17", "Spring Boot", "Spring Batch", "Oracle", "Mongo", "Angular", "Node", "Docker", "Jenkins", "Openshift", "Sonarqube", "Veracode"]
+        "techs": ["Maven","Junit y Mockito","Shell","ctl","sqlplus y sqlldr ","PL/SQL","Jira","Jenkins","Postman","Framework Darwin", "Entra ID", "Redis", "Kafka", "Java 17", "Spring Boot", "Spring Batch", "Oracle", "Mongo", "Angular", "Node", "Docker", "Jenkins", "Openshift", "Sonarqube", "Veracode","Fortify","ALM"]
       },
       {
         "icon": "emoji_events",
@@ -69,8 +69,9 @@
         "expanded": false,
         "responsibilitiesLabel": "Aportaciones",
         "bullets": [
-          "Análisis y administración de bases de datos (Oracle, MariaDB).",
+          "Consumo de servicios web SOAP y REST ",
           "Desarrollo de microservicios y módulos para PBX virtual.",
+          "Configuración de scripts para servicios de telefonía (Asterisk, Centos).",
           "Automatización y scripting para servicios de telefonía."
         ],
         "techLabel": "Tecnologías",
@@ -146,7 +147,8 @@
     "title": "Hablemos",
     "intro": "Si necesitas apoyo en desarrollo backend, arquitectura o evolución de plataformas, este es el mejor punto de entrada.",
     "channelLabel": "Canal principal",
-    "email": "correo@ejemplo.com",
+    "email": "bautistalopezfj@gmail.com",
+    "celular": "5540460224",
     "emailCopy": "Respuesta orientada a oportunidades laborales, colaboración técnica y proyectos de desarrollo.",
     "blocks": [
       {
