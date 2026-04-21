@@ -1,0 +1,54 @@
+@if (perfil$ | async; as p) {
+<section class="profile-section">
+  <div class="section-heading">
+    <span class="section-kicker">{{ p.kicker }}</span>
+    <h1 class="section-title">{{ p.name }} <span class="accent">{{ p.nameAccent }}</span></h1>
+    <p class="section-intro">{{ p.intro }}</p>
+  </div>
+
+  <article class="profile-card">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="profile-tag">{{ p.tag }}</div>
+        <p class="lead">{{ p.lead }}</p>
+        <p class="summary">{{ p.summary }}</p>
+
+        <div class="profile-metrics">
+          @for (metric of p.metrics; track metric.label) {
+            <div class="metric-card">
+              <span class="metric-value">{{ metric.value }}</span>
+              <span class="metric-label">{{ metric.label }}</span>
+            </div>
+          }
+        </div>
+
+        <div class="hero-ctas">
+          <a mat-flat-button color="primary" [href]="'mailto:' + p.email">Contactar</a>
+          <a mat-stroked-button color="primary" [routerLink]="['/experiencia']">Ver experiencia</a>
+        </div>
+
+        <div class="focus-block">
+          <span class="focus-label">Fortalezas</span>
+          <div class="focus-list">
+            @for (s of p.strengths; track s) {
+              <span class="focus-pill">{{ s }}</span>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="photo-shell">
+          <div class="photo">
+            <mat-icon class="photo-icon">person</mat-icon>
+          </div>
+          <div class="availability-card">
+            <span class="availability-dot"></span>
+            {{ p.availability }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+}

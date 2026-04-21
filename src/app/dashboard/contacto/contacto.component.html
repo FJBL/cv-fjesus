@@ -1,0 +1,31 @@
+@if (contacto$ | async; as c) {
+<section class="contact-section">
+  <div class="section-heading">
+    <span class="section-kicker">{{ c.kicker }}</span>
+    <h2 class="section-title">{{ c.title }}</h2>
+    <p class="section-intro">{{ c.intro }}</p>
+  </div>
+
+  <article class="contact-card">
+    <div class="contact-hero">
+      <div>
+        <div class="contact-label">{{ c.channelLabel }}</div>
+        <a class="contact-mail" [href]="'mailto:' + c.email">{{ c.email }}</a>
+        <p class="contact-copy">{{ c.emailCopy }}</p>
+      </div>
+      <div class="contact-badge">
+        <mat-icon>mail</mat-icon>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      @for (block of c.blocks; track block.title) {
+        <div class="contact-block">
+          <span class="block-title">{{ block.title }}</span>
+          <p>{{ block.text }}</p>
+        </div>
+      }
+    </div>
+  </article>
+</section>
+}

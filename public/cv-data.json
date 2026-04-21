@@ -1,0 +1,166 @@
+{
+  "perfil": {
+    "kicker": "Perfil",
+    "name": "Flaviano de Jesús",
+    "nameAccent": "Bautista López",
+    "intro": "Desarrollador orientado a arquitectura backend, microservicios, seguridad y plataformas empresariales de alta disponibilidad.",
+    "tag": "Arquitecto de software · Java · Integración empresarial",
+    "lead": "Más de 7 años en diseño, evolución y mantenimiento de aplicaciones de alto rendimiento para organizaciones como Santander, SAT y Totalplay.",
+    "summary": "Trabajo con foco en escalabilidad, observabilidad, seguridad y calidad técnica, participando en soluciones que integran microservicios, mensajería, autenticación y administración de datos críticos.",
+    "metrics": [
+      { "value": "7+", "label": "Años de experiencia" },
+      { "value": "4",  "label": "Sectores clave" },
+      { "value": "Full Stack", "label": "Backend y front corporativo" }
+    ],
+    "email": "correo@ejemplo.com",
+    "strengths": ["Microservicios", "Seguridad", "Bases de datos", "Arquitectura escalable"],
+    "availability": "Disponible para proyectos y nuevas oportunidades"
+  },
+
+  "experiencia": {
+    "kicker": "Trayectoria",
+    "title": "Experiencia Profesional",
+    "intro": "Resumen de proyectos, responsabilidades y tecnologías con las que he trabajado en entornos corporativos y productos de alto impacto.",
+    "jobs": [
+      {
+        "icon": "work",
+        "company": "Santander",
+        "period": "08/2021 – Presente",
+        "jobTitle": "Desarrollador de Software Full Stack",
+        "summary": "Migración de tecnología Agave en un entorno CAAS con arquitectura de microservicios.",
+        "expanded": true,
+        "responsibilitiesLabel": "Responsabilidades clave",
+        "bullets": [
+          "Análisis, desarrollo y mantenimiento de microservicios.",
+          "Configuración de API Gateway y componentes para pistas de auditoría.",
+          "Autenticación por Entra ID (Azure) y manejo de sesión con Redis.",
+          "Pruebas unitarias, SAST y DAST; documentación técnica completa.",
+          "Trabajo bajo marco Scrum."
+        ],
+        "highlight": {
+          "label": "Proyecto adicional",
+          "text": "Migración y Calidad de Datos a Nómina SAP, con soporte a procesos de nómina, pensiones y RRHH."
+        },
+        "techLabel": "Tecnologías",
+        "techs": ["Framework Darwin", "Entra ID", "Redis", "Kafka", "Java 17", "Spring Boot", "Spring Batch", "Oracle", "Mongo", "Angular", "Node", "Docker", "Jenkins", "Openshift", "Sonarqube", "Veracode"]
+      },
+      {
+        "icon": "emoji_events",
+        "company": "Servicio de Administración Tributaria (SAT)",
+        "period": "10/2018 – 07/2020",
+        "jobTitle": "Desarrollador de Software",
+        "summary": "Implementación de soluciones backend y consumo de datos para plataformas tributarias.",
+        "expanded": false,
+        "responsibilitiesLabel": "Aportaciones",
+        "bullets": [
+          "Desarrollo de microservicios (Spring Boot, Docker).",
+          "Análisis y modificación de bases de datos (Oracle, PostgreSQL).",
+          "Integración de dashboards y portales, consumo de datos en CSV y S3."
+        ],
+        "techLabel": "Tecnologías",
+        "techs": ["Spring Boot", "Docker", "Oracle", "PostgreSQL", "CSV", "Amazon S3"]
+      },
+      {
+        "icon": "settings",
+        "company": "Totalplay (PBX Virtual)",
+        "period": "08/2020 – 07/2021",
+        "jobTitle": "Desarrollador Java",
+        "summary": "Desarrollo de módulos y automatizaciones para servicios de telefonía y PBX virtual.",
+        "expanded": false,
+        "responsibilitiesLabel": "Aportaciones",
+        "bullets": [
+          "Análisis y administración de bases de datos (Oracle, MariaDB).",
+          "Desarrollo de microservicios y módulos para PBX virtual.",
+          "Automatización y scripting para servicios de telefonía."
+        ],
+        "techLabel": "Tecnologías",
+        "techs": ["Java", "Oracle", "MariaDB", "Microservicios", "Scripting"]
+      },
+      {
+        "icon": "code",
+        "company": "Brainup Systems",
+        "period": "07/2017 – 09/2018",
+        "jobTitle": "Desarrollador Java",
+        "summary": "Mantenimiento correctivo y seguimiento operativo de aplicaciones en producción.",
+        "expanded": false,
+        "responsibilitiesLabel": "Aportaciones",
+        "bullets": [
+          "Desarrollo de sistema de tickets y corrección de errores en producción.",
+          "Monitoreo y reportes del estado de las aplicaciones."
+        ],
+        "techLabel": "Enfoque",
+        "techs": ["Java", "Soporte productivo", "Monitoreo", "Sistema de tickets"]
+      }
+    ]
+  },
+
+  "habilidades": {
+    "kicker": "Stack",
+    "title": "Habilidades",
+    "titleAccent": "Técnicas",
+    "intro": "Tecnologías y capacidades con las que construyo, mantengo y evoluciono soluciones empresariales.",
+    "stats": [
+      { "value": "+18", "label": "Tecnologías" },
+      { "value": "4",   "label": "Áreas de expertise" },
+      { "value": "+5",  "label": "Años de experiencia" }
+    ],
+    "categories": [
+      {
+        "icon": "developer_board",
+        "title": "Backend & Arquitectura",
+        "description": "Diseño de servicios, integración y operación de plataformas robustas.",
+        "ariaLabel": "Backend y arquitectura",
+        "pills": ["Java", "Spring Boot", "Spring Batch", "Microservicios", "API Gateway", "Node"]
+      },
+      {
+        "icon": "storage",
+        "title": "Datos & Mensajería",
+        "description": "Persistencia, análisis e integración de datos para procesos críticos.",
+        "ariaLabel": "Datos y mensajería",
+        "pills": ["Oracle", "PostgreSQL", "MariaDB", "MongoDB", "Redis", "Kafka"]
+      },
+      {
+        "icon": "web",
+        "title": "Frontend & Plataforma",
+        "description": "Interfaces integradas con ecosistemas modernos y despliegue continuo.",
+        "ariaLabel": "Frontend y plataforma",
+        "pills": ["Angular", "ReactJS", "Docker", "Jenkins", "OpenShift", "SonarQube"]
+      },
+      {
+        "icon": "groups",
+        "title": "Forma de trabajo",
+        "description": "Capacidades transversales para entregar software con orden y foco operativo.",
+        "ariaLabel": "Forma de trabajo",
+        "soft": true,
+        "points": [
+          "Trabajo colaborativo con equipos Scrum.",
+          "Documentación técnica y seguimiento de calidad.",
+          "Pruebas, seguridad y mantenimiento continuo."
+        ]
+      }
+    ]
+  },
+
+  "contacto": {
+    "kicker": "Contacto",
+    "title": "Hablemos",
+    "intro": "Si necesitas apoyo en desarrollo backend, arquitectura o evolución de plataformas, este es el mejor punto de entrada.",
+    "channelLabel": "Canal principal",
+    "email": "correo@ejemplo.com",
+    "emailCopy": "Respuesta orientada a oportunidades laborales, colaboración técnica y proyectos de desarrollo.",
+    "blocks": [
+      {
+        "title": "Especialidad",
+        "text": "Microservicios, integraciones empresariales, seguridad y modernización de aplicaciones."
+      },
+      {
+        "title": "Modalidad",
+        "text": "Participación en equipos internos, mantenimiento evolutivo o desarrollo por objetivos."
+      },
+      {
+        "title": "Valor aportado",
+        "text": "Enfoque técnico pragmático, claridad en arquitectura y experiencia en entornos corporativos."
+      }
+    ]
+  }
+}

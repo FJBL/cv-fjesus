@@ -1,0 +1,58 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="app-sidenav" mode="over" aria-label="Side navigation">
+    <mat-nav-list>
+      @for (item of menu; track item.path) {
+        <a mat-list-item [routerLink]="item.path" (click)="sidenav.close()"
+           routerLinkActive="sidenav-active" #rlaS="routerLinkActive" [attr.aria-current]="rlaS.isActive ? 'page' : null">
+          <mat-icon aria-hidden="true">{{ item.icon || 'circle' }}</mat-icon>
+          <span class="menu-label">{{ item.label }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-elevation-z4 toolbar">
+      <button mat-icon-button class="menu-button show-on-mobile" (click)="sidenav.toggle()" aria-label="Abrir menú">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="toolbar-left">
+        <mat-icon class="avatar">badge</mat-icon>
+        <div class="title-block">
+          <span class="name">Flaviano de Jesús</span>
+          <small class="subtitle">Desarrollador Java & Microservicios</small>
+        </div>
+      </div>
+
+      <nav class="toolbar-right" aria-label="Main navigation">
+        @for (item of menu; track item.path) {
+          <a mat-button [routerLink]="item.path"
+             routerLinkActive="active" #rla="routerLinkActive" [attr.aria-current]="rla.isActive ? 'page' : null">
+            <mat-icon class="menu-icon" aria-hidden="true">{{ item.icon || 'circle' }}</mat-icon>
+            {{ item.label }}
+          </a>
+        }
+      </nav>
+    </mat-toolbar>
+
+    <main class="container">
+      <div class="left">
+        <div class="page-card">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+      <aside class="right">
+        <div class="page-card">
+          <h4>Hola</h4>
+          <!-- Right column reserved for persistent info or widgets -->
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small class="footer-copy">© 2024 Flaviano de Jesús Bautista López</small>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

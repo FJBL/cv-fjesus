@@ -1,0 +1,154 @@
+/* App-level layout and toolbar styles */
+
+.toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+	height: 72px;
+	gap: 12px;
+}
+
+.toolbar-left { display: flex; align-items: center; gap: 12px; }
+.avatar { background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border-radius: 8px; padding: 8px; font-size: 28px; }
+.title-block { display: flex; flex-direction: column; }
+.name { font-weight: 600; font-size: 1.05rem; }
+.subtitle { font-size: 0.78rem; opacity: 0.85; }
+
+.toolbar-right { display: flex; gap: 8px; align-items: center; }
+
+/* Hamburger button — hidden by default, shown on mobile */
+.menu-button { display: none; background: transparent; border-radius: 8px; }
+.show-on-mobile { display: none; }
+.menu-button mat-icon { color: var(--text); font-size: 24px; }
+.menu-button:hover { background: rgba(255,255,255,0.03); }
+
+/* Sidenav */
+.app-sidenav { background: linear-gradient(180deg, rgba(5,15,30,0.98), rgba(10,25,45,0.98)); color: var(--text); width: 280px; padding-top: 72px; }
+.app-sidenav.mat-drawer { z-index: 2000; }
+
+.app-sidenav a.mat-list-item { position: relative; display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.05rem; padding: 14px 18px; margin: 6px 10px; border-radius: 10px; }
+
+/* Sidenav text and icon colors — use high-specificity selectors instead of !important */
+:root .app-sidenav,
+:root .app-sidenav .mat-nav-list,
+:root .app-sidenav .mat-list-item,
+:root .app-sidenav a.mat-list-item,
+:root .app-sidenav .mat-line,
+:root .app-sidenav .mat-list-text {
+	color: #ffffff;
+}
+
+:root .app-sidenav .mat-nav-list a.mat-list-item,
+:root .app-sidenav .mat-nav-list a.mat-list-item .mat-line,
+:root .app-sidenav .mat-nav-list .mat-list-item,
+:root .app-sidenav .mat-nav-list .mat-list-item .mat-line,
+:root .app-sidenav .mat-nav-list .mat-line,
+:root .app-sidenav .mat-nav-list .mat-list-text {
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+
+:root .app-sidenav .mat-nav-list a.mat-list-item span { color: #ffffff; }
+
+.app-sidenav .menu-label {
+	color: #ffffff;
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: 700;
+	font-size: 1.02rem;
+	position: relative;
+	z-index: 2;
+}
+
+:root .app-sidenav .mat-icon { color: #ffffff; }
+
+/* Backdrop */
+.cdk-overlay-backdrop.mat-drawer-backdrop { background-color: rgba(0,0,0,0.64); }
+
+/* Sidenav hover / active */
+.app-sidenav .mat-nav-list a.mat-list-item:hover { background: rgba(255,255,255,0.035); transform: translateX(4px); }
+
+.app-sidenav .mat-nav-list a.sidenav-active {
+	background: linear-gradient(90deg, rgba(25,118,210,0.08), rgba(0,188,212,0.02));
+	box-shadow: inset 4px 0 0 var(--accent);
+	border-left: 3px solid var(--primary);
+}
+.app-sidenav .mat-nav-list a.sidenav-active .mat-list-text { font-weight: 600; }
+.app-sidenav .mat-nav-list a.sidenav-active::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 4px; background: var(--accent); border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+/* Sidenav list items spacing */
+.app-sidenav .mat-nav-list a.mat-list-item { padding-left: 16px; padding-right: 16px; margin: 4px 6px; border-radius: 8px; }
+
+/* Toolbar */
+.mat-toolbar.toolbar {
+	background: linear-gradient(180deg, rgba(15,23,36,0.92), rgba(7,16,41,0.98));
+	color: #ffffff;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.mat-toolbar.toolbar .name { color: #ffffff; }
+.mat-toolbar.toolbar .subtitle { color: rgba(255,255,255,0.85); }
+
+.toolbar-right a[mat-button] {
+	color: var(--muted);
+	padding: 8px 12px;
+	border-radius: 999px;
+	transition: all 160ms ease;
+	font-weight: 500;
+	font-size: 0.95rem;
+}
+
+.toolbar-right a[mat-button]:hover {
+	color: var(--text);
+	background: rgba(255,255,255,0.03);
+	transform: translateY(-1px);
+}
+
+.toolbar-right a.active {
+	color: var(--text);
+	background: linear-gradient(90deg, rgba(0,188,212,0.06), rgba(25,118,210,0.04));
+	box-shadow: 0 6px 22px rgba(2,6,23,0.5);
+	transform: translateY(-1px);
+	position: relative;
+}
+
+/* Accent underline indicator for active top menu */
+.toolbar-right a.active::after {
+	content: '';
+	position: absolute;
+	left: 12%;
+	right: 12%;
+	bottom: 8px;
+	height: 3px;
+	border-radius: 3px;
+	background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+main.container { display: flex; gap: 22px; align-items: flex-start; padding-top: 22px; }
+.left { flex: 1; }
+.right { width: 320px; position: sticky; top: 92px; align-self: flex-start; }
+
+footer { text-align: center; padding: 18px 0; margin-top: 28px; color: var(--muted); }
+
+/* Card-like sections inside the left column */
+.left .page-card { margin-bottom: 18px; }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+	.toolbar { height: 64px; flex-wrap: wrap; gap: 8px; }
+
+	/* On small screens hide the top menu and show the hamburger (sidenav-only) */
+	.toolbar-right { display: none; }
+
+	.toolbar-right a[mat-button] { padding: 6px 10px; font-size: 0.9rem; white-space: nowrap; }
+
+	.menu-button, .show-on-mobile { display: inline-flex; }
+	main.container { flex-direction: column; }
+	.right { width: 100%; position: static; }
+}
+
+/* Small polish for accessibility */
+a[mat-button]:focus, button:focus { outline: 2px solid rgba(0,188,212,0.18); outline-offset: 2px; }
+

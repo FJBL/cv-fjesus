@@ -1,0 +1,6 @@
+[
+  { "label": "Perfil", "path": "/perfil", "icon": "person" },
+  { "label": "Experiencia", "path": "/experiencia", "icon": "work" },
+  { "label": "Habilidades", "path": "/habilidades", "icon": "build" },
+  { "label": "Contacto", "path": "/contacto", "icon": "mail" }
+]

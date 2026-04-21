@@ -1,0 +1,56 @@
+@if (experiencia$ | async; as exp) {
+<section class="exp-section">
+  <div class="section-heading">
+    <span class="section-kicker">{{ exp.kicker }}</span>
+    <h2 class="section-title">{{ exp.title }}</h2>
+    <p class="section-intro">{{ exp.intro }}</p>
+  </div>
+
+  <mat-accordion class="exp-accordion" multi>
+    @for (job of exp.jobs; track job.company) {
+      <mat-expansion-panel class="exp-panel" [expanded]="job.expanded">
+        <mat-expansion-panel-header class="exp-panel-header">
+          <mat-panel-title>
+            <div class="panel-head">
+              <div class="icon-badge">
+                <mat-icon>{{ job.icon }}</mat-icon>
+              </div>
+              <div class="panel-copy">
+                <div class="header-top">
+                  <div class="company-name">{{ job.company }}</div>
+                  <div class="job-period">{{ job.period }}</div>
+                </div>
+                <div class="job-title">{{ job.jobTitle }}</div>
+                <p class="job-summary">{{ job.summary }}</p>
+              </div>
+            </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="job-body">
+          <div class="content-label">{{ job.responsibilitiesLabel }}</div>
+          <ul class="bullets">
+            @for (bullet of job.bullets; track bullet) {
+              <li>{{ bullet }}</li>
+            }
+          </ul>
+
+          @if (job.highlight) {
+            <div class="job-highlight">
+              <span class="highlight-label">{{ job.highlight.label }}</span>
+              <p>{{ job.highlight.text }}</p>
+            </div>
+          }
+
+          <div class="content-label">{{ job.techLabel }}</div>
+          <div class="tech-list">
+            @for (tech of job.techs; track tech) {
+              <span class="tech-pill">{{ tech }}</span>
+            }
+          </div>
+        </div>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+</section>
+}

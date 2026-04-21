@@ -1,0 +1,54 @@
+@if (habilidades$ | async; as h) {
+<section class="skills-section">
+  <header class="section-heading">
+    <span class="section-kicker">
+      <mat-icon class="kicker-icon">bolt</mat-icon>
+      {{ h.kicker }}
+    </span>
+    <h2 class="section-title">{{ h.title }} <span class="title-accent">{{ h.titleAccent }}</span></h2>
+    <p class="section-intro">{{ h.intro }}</p>
+    <div class="heading-divider">
+      <span class="divider-line"></span>
+      <span class="divider-dot"></span>
+      <span class="divider-line"></span>
+    </div>
+    <div class="skills-stats">
+      @for (stat of h.stats; track stat.label) {
+        @if (!$first) { <span class="stat-sep"></span> }
+        <div class="stat-item">
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+  </header>
+
+  <div class="skills-grid">
+    @for (cat of h.categories; track cat.title) {
+      <article class="skill-card" [class.soft-card]="cat.soft">
+        <div class="card-head">
+          <div class="icon-badge"><mat-icon>{{ cat.icon }}</mat-icon></div>
+          <div>
+            <h3>{{ cat.title }}</h3>
+            <p>{{ cat.description }}</p>
+          </div>
+        </div>
+        @if (cat.pills) {
+          <div class="chips" [attr.aria-label]="cat.ariaLabel">
+            @for (pill of cat.pills; track pill) {
+              <span class="skill-pill">{{ pill }}</span>
+            }
+          </div>
+        }
+        @if (cat.points) {
+          <ul class="skill-points">
+            @for (point of cat.points; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+        }
+      </article>
+    }
+  </div>
+</section>
+}
